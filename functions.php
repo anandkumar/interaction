@@ -31,6 +31,7 @@ new Hybrid();
 
 /* Load theme-specific files. */
 require_once( $stargazer_dir . 'inc/custom-background.php'     );
+require_once( $stargazer_dir . 'inc/custom-header.php'         );
 require_once( $stargazer_dir . 'inc/custom-colors.php'         );
 
 /* Set up the theme early. */
@@ -106,14 +107,4 @@ function stargazer_theme_setup() {
 	/* Handle content width for embeds and images. */
 	// Note: this is the largest size based on the theme's various layouts.
 	hybrid_set_content_width( 1025 );
-}
-
-/** Overwrite theme layout options **/
-add_filter( 'theme_mod_theme_layout', 'my_mod_theme_layout', 99 );
-function my_mod_theme_layout( $layout ) {
-
-	if ( is_bbpress() )
-		$layout = '1c';
-
-	return $layout;
 }

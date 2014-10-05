@@ -1,8 +1,10 @@
 /**
  * Theme Name:  Interaction
- * Theme URI:   http://themehybrid.com/themes/stargazer
+ * Theme URI:   http://interaction.co/themes/interaction/
  * Description: Welcome to Stargazer, the most advanced theme ever created for WordPress without compromising standards. This is the only theme in the world that you'll find that extends WordPress' built-in theme features so robustly but naturally. The theme is built on the rock-solid Hybrid Core theme framework. It's built with search-engine optimization (SEO) in mind by utilizing the most current HTML5 conventions and <a href="http://schema.org">Schema.org</a> microdata. It also integrates with useful theme add-on plugins like <a href="http://wordpress.org/plugins/custom-background-extended">Custom Background Extended</a>, <a href="http://wordpress.org/plugins/custom-header-extended">Custom Header Extended</a>, <a href="http://wordpress.org/plugins/whistles">Whistles</a>, and more.
  * Version:     1.2.1
+ * Author:      Anand Kumar
+ * Author URI:  http://anandkumar.net
  * Author:      Justin Tadlock
  * Author URI:  http://justintadlock.com
  * Tags:        one-column, two-columns, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, theme-options, threaded-comments, translation-ready
@@ -393,6 +395,9 @@ pre,
 
 	.ltr .widget ul { margin-left:  1.5rem; }
 	.rtl .widget ul { margin-right: 1.5rem; }
+	
+	.ltr .widget ul.soliloquy-slider { margin-left: 0; }
+	.rtl .widget ul.soliloquy-slider { margin-right: 0; }
 
 	dt { font-weight: 700; }
 
@@ -510,8 +515,7 @@ table {
 		input[type="time"],
 		input[type="url"],
 		input[type="week"],
-		textarea,
-		select {
+		textarea {
 			padding:   10px 1.5rem;
 			font-size: 1.125rem;
 			border:    1px solid;
@@ -538,8 +542,7 @@ table {
 		input[type="time"],
 		input[type="url"],
 		input[type="week"],
-		textarea,
-		select { width: 100%; }
+		textarea { width: 100%; }
 
 		input[name="post_password"] { margin-bottom: 25px; }
 
@@ -1184,8 +1187,10 @@ blockquote::before,
 		#site-title {
 			margin:    0;
 			padding:   0;
-			font-size: 2.125rem;
+			font-size: 2rem;
 			border:    none;
+			font-weight: 400;
+			text-transform: uppercase;
 		}
 
 			#site-title a:hover,
@@ -3200,10 +3205,33 @@ blockquote a:focus,
  * This concludes the fun area for making your child theme unique.
  ********************************************************************************************************/
  
- header#header {
-	background: #38E3E9;
+#header {
+	background: #268FD5;
+}
+
+#header a {
+	color: #fff;
 }
 
 .bbpress .entry {
 	margin: 0;
+}
+
+#sidebar-header {
+    float: right;
+	margin-top: 16px;
+}
+#sidebar-header .widget_nav_menu {
+    margin-top: 8px;
+}
+#sidebar-header .menu li {
+    padding: 8px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bbp-meta,
+p.bbp-topic-meta {
+	font-size: .9rem;
 }

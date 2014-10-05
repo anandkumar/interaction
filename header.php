@@ -17,16 +17,16 @@
 
 				<div id="branding">
 					<?php hybrid_site_title(); ?>
-					<?php hybrid_site_description(); ?>
+					<?php // hybrid_site_description(); ?>
 				</div><!-- #branding -->
+
+			<?php hybrid_get_sidebar( 'header' ); // Loads the sidebar/header.php template. ?>
 
 		</header><!-- #header -->
 
-		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. 
-		
-		
-		if ( function_exists( 'soliloquy' ) ) { soliloquy( '2538', 'slug' ); }
-		?>
+		<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
+
+		<?php hybrid_get_sidebar( 'home' ); // Loads the sidebar/home.php template. ?>
 
 		<div class="wrap">
 

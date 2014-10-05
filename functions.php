@@ -117,3 +117,28 @@ function my_mod_theme_layout( $layout ) {
 
 	return $layout;
 }
+
+add_filter('bbp_no_breadcrumb', function($arg) { return true; } );
+
+function add_extra_contactmethod( $contactmethods ) {
+// Add new ones
+$contactmethods['twitter'] = 'Twitter';
+$contactmethods['facebook'] = 'Facebook';
+$contactmethods['googleplus'] = 'Google Plus';
+$contactmethods['youtube'] = 'Youtube Channel';
+ 
+// remove unwanted
+unset($contactmethods['aim']);
+unset($contactmethods['jabber']);
+unset($contactmethods['yim']);
+ 
+return $contactmethods;
+}
+add_filter('user_contactmethods', 'add_extra_contactmethod');
+
+function short_freshness_time( $output) {
+$output = preg_replace( '/, .*[^ago]/', ' ', $output );
+return $output;
+}
+add_filter( 'bbp_get_time_since', 'short_freshness_time' );
+add_filter('bp_core_time_since', 'short_freshness_time');

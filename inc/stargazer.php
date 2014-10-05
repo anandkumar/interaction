@@ -97,6 +97,14 @@ function stargazer_register_sidebars() {
 
 	hybrid_register_sidebar(
 		array(
+			'id'          => 'header',
+			'name'        => _x( 'Header', 'sidebar', 'stargazer' ),
+			'description' => __( 'A sidebar located in the header of the site. Optimized for one widget, mostly used for Navigation, Search form and Social Media Icons or ADS.', 'stargazer' )
+		)
+	);
+
+	hybrid_register_sidebar(
+		array(
 			'id'          => 'primary',
 			'name'        => _x( 'Primary', 'sidebar', 'stargazer' ),
 			'description' => __( 'The main sidebar. It is displayed on either the left or right side of the page based on the chosen layout.', 'stargazer' )
@@ -108,6 +116,14 @@ function stargazer_register_sidebars() {
 			'id'          => 'subsidiary',
 			'name'        => _x( 'Subsidiary', 'sidebar', 'stargazer' ),
 			'description' => __( 'A sidebar located in the footer of the site. Optimized for one, two, or three widgets (and multiples thereof).', 'stargazer' )
+		)
+	);
+
+	hybrid_register_sidebar(
+		array(
+			'id'          => 'home',
+			'name'        => _x( 'Home', 'sidebar', 'stargazer' ),
+			'description' => __( 'Homepage can be easily built with the help of widgets', 'stargazer' )
 		)
 	);
 }

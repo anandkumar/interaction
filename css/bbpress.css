@@ -117,11 +117,6 @@ body.reply-edit .reply {
 	border-left: 1px solid #ddd;
 }
 
-#bbpress-forums .bbp-forums-list li {
-	display: inline;
-	// font-size: 11px;
-}
-
 #bbpress-forums li.bbp-footer p {
 	margin: 0;
 	line-height: 1em;
@@ -173,6 +168,10 @@ li.bbp-header div.bbp-reply-content span#favorite-toggle {
  	margin: 8px 0;
 	padding: 0;
 	text-transform: none;
+}
+
+a.bbp-forum-title {
+	font-weight: 700;
 }
 
 #bbpress-forums div.bbp-forum-author,
